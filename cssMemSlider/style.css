@@ -1,0 +1,87 @@
+body {
+    background: grey;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: max-content;
+	margin: 100px auto 0;
+	position: relative;
+	width: max-content;
+}
+
+.slider-mems {
+	background-color: #ddd;
+    overflow: hidden;	
+	-webkit-box-shadow: 0 0 2em rgba(0, 0, 0, .5);
+	box-shadow: 0 0 2em rgba(0, 0, 0, .5);
+    width: max-content;
+    height: max-content;
+    margin-inline: auto;
+}
+
+.wrapper > input {
+	display: none;
+}
+
+.wrapper .controls {
+	left: 50%;
+   position: absolute ;
+	margin-left: -98px;
+	
+}
+
+.wrapper label {
+	cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 25px 12px 0 16px;
+	position: relative;
+	width: 8px;
+	border-radius: 50%;
+	transition: background ease-in-out .5s;
+}
+
+.wrapper label:after {
+	border: 2px solid #ddd;
+	content: " ";
+	display: block;
+	border-radius: 50%;
+    height: 12px;
+	left: -4px;
+	position: absolute;
+	top: -4px;
+	width: 12px;
+}
+
+.wrapper label:hover, 
+#mem1:checked ~ .controls label:nth-of-type(1),
+#mem2:checked ~ .controls label:nth-of-type(2),
+#mem3:checked ~ .controls label:nth-of-type(3),
+#mem4:checked ~ .controls label:nth-of-type(4),
+#mem5:checked ~ .controls label:nth-of-type(5) {
+	background: #ddd;
+}
+
+.mems {
+	height: inherit;
+	opacity: 0;
+	position: absolute;
+	width: inherit;
+	z-index: 0;
+	transform: scale(1.5);
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+
+#mem1:checked ~ .slider-mems > .mem1,
+#mem2:checked ~ .slider-mems > .mem2,
+#mem3:checked ~ .slider-mems > .mem3,
+#mem4:checked ~ .slider-mems > .mem4,
+#mem5:checked ~ .slider-mems > .mem5 {
+	opacity: 1;
+	z-index: 1;
+	transform: scale(1);
+}
+
