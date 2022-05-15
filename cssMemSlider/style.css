@@ -1,3 +1,5 @@
+
+
 .slider {
     width: 80%;
 	background-image: url('meme/background-img.png');
@@ -80,6 +82,7 @@
 
 	.mem {
         width: 100%;
+        object-fit: contain;
         align-self: center;
         grid-area: A;
         opacity: 0;
@@ -88,13 +91,20 @@
 
     .slider__image {
         width: 70%;
+        max-height: 85vh;
     }    
 
 	.slider__label {
         background: rgba(0, 0, 0, 0);
-        width: 1.3em;
-        height: 1.3em;
+        width: 0.8em;
+        height: 0.8em;
         
+    }
+
+    .slider__label div {
+        width: 1.5em;
+        height: 1.5em;
+        margin: -0.3em;
     }
 
     .slider__label:hover {
@@ -111,6 +121,7 @@
         border-radius: 50%;
         width: 0.8em;
         height: 0.8em;
+        transition: all 100ms ease-in;
     }  
 
     
@@ -135,4 +146,24 @@
     height: 0.8em;
 	}
 
-   
+
+    @media screen and (max-width: 720px) { 
+        .slider {        
+            grid-template-columns:   4.5fr 13fr 1fr 1fr 1fr 1fr 1fr 1fr 4.5fr; 
+    }
+}
+
+    @media screen and (max-width: 550.5px) { 
+
+    .slider {        
+        grid-template-areas: 
+    "A A A A A A A A A A"
+    "J J C D E F G H I I"
+    "L B B B B B B B B N"
+    "M M M M M M M M M M" ;
+    grid-template-columns:  1.6fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.6fr; 
+    }
+}
+
+/* лучше сделать анимацию через animation
+искажение первой картинки - вертикальный скролл */
