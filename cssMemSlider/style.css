@@ -1,12 +1,27 @@
+body {
+    margin: 0;
+}
 
+.wrapper {
+    min-height: 100vh;
+    background-image: url('meme/phon.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .slider {
-    width: 80%;
+    width: 50%;
+    overflow: hidden;
 	background-image: url('meme/background-img.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     box-shadow: 0 0 2em rgba(0, 0, 0, .8);
+    border-radius: 3%;
 	text-align:center;
     justify-content: center;
     margin: 0 auto;
@@ -17,127 +32,137 @@
     "A A A A A A A A A"
     "J B C D E F G H I"
     "K K K K K K K K K" ;
-    grid-template-columns:  4fr 13fr 1fr 1fr 1fr 1fr 1fr 1fr 4fr;
-    }
+    grid-template-columns:  15% 40% 1fr 1fr 1fr 1fr 1fr 1fr 15%;
+}
 
-    .slider-text {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1em;
-        line-height: 130%;
-        letter-spacing: 0.005em;
-        color: black;
-        grid-area: B;
-        opacity: 0;
-        margin: 0;
-        justify-self: start;
-        align-self: center;
-        text-align: left;
-        transform: scale(0.5);
-        
-        
-    }
+.slider-text {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 130%;
+    letter-spacing: 0.005em;
+    color: black;
+    grid-area: B;
+    opacity: 0;
+    margin: 0.5em;
+    justify-self: start;
+    align-self: center;
+    text-align: left;
+    transform: translateY(-100%);
+           
+}
 
-    #slider__check-1, .slider__label1 {
-        grid-area: C;
-         justify-self: center;
-         align-self: center;
-    }
-    #slider__check-2, .slider__label2 {
-        grid-area: D;   
-         justify-self: center;
-         align-self: center;
-    }
-    #slider__check-3, .slider__label3 {
-        grid-area: E;     
-         justify-self: center;
-         align-self: center;
-    }
-    #slider__check-4, .slider__label4 {
-        grid-area: F;   
-         justify-self: center;
-         align-self: center;
-    }
-    #slider__check-5, .slider__label5 {
-        grid-area: G; 
-        justify-self: center; 
-        align-self: center;  
-        
-    }
-    #slider__check-6, .slider__label6 {
-        grid-area: H;
+#slider__check-1, .slider__label1 {
+    grid-area: C;
+    justify-self: center;
+    align-self: center;
+}
+#slider__check-2, .slider__label2 {
+    grid-area: D;   
+    justify-self: center;
+    align-self: center;
+}
+
+#slider__check-3, .slider__label3 {
+    grid-area: E;     
         justify-self: center;
         align-self: center;
-                     
-    }
-
-    input {
-        margin: 5px;
-		background: grey;
-		border-radius:50%;
-        cursor: pointer;
-        
-    }    
-
-	.mem {
-        width: 100%;
-        object-fit: contain;
+}
+#slider__check-4, .slider__label4 {
+    grid-area: F;   
+        justify-self: center;
         align-self: center;
-        grid-area: A;
-        opacity: 0;
-        transform: scale(0.5);
-		}
-
-    .slider__image {
-        width: 70%;
-        max-height: 85vh;
-    }    
-
-	.slider__label {
-        background: rgba(0, 0, 0, 0);
-        width: 0.8em;
-        height: 0.8em;
-        
-    }
-
-    .slider__label div {
-        width: 1.5em;
-        height: 1.5em;
-        margin: -0.3em;
-    }
-
-    .slider__label:hover {
-        background: #fff;
-        border: 1px solid #C00;
-        border-radius: 50%;
-        cursor: pointer;
-        width: 0.8em;
-        height: 0.8em;
-    }
-
-    .slider__label:active {
-        background: black;
-        border-radius: 50%;
-        width: 0.8em;
-        height: 0.8em;
-        transition: all 100ms ease-in;
-    }  
-
+}
+#slider__check-5, .slider__label5 {
+    grid-area: G; 
+    justify-self: center; 
+    align-self: center;  
     
+}
+#slider__check-6, .slider__label6 {
+    grid-area: H;
+    justify-self: center;
+    align-self: center;                 
+}
+
+input {
+    margin: 0.3em;
+    background: grey;
+    border-radius:50%;
+    cursor: pointer;  
+}    
+
+.mem {
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    grid-area: A;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.slider__image {
+    width: 70%;
+    object-fit: contain;
+    
+}    
+
+.slider__label {
+    width: 0.8em;
+    height: 0.8em;
+    
+}
+
+.slider__label div {
+    width: 1.5em;
+    height: 1.5em;
+    margin: -0.3em;
+}
+
+.slider__label:hover {
+    background: #fff;
+    border: 0.1em solid #C00;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 0.8em;
+    height: 0.8em;
+}
+
+.slider__label:active {
+    background: black;
+    border-radius: 50%;
+    width: 0.8em;
+    height: 0.8em;
+    transition: all 100ms ease-in;
+}  
+
+@keyframes move {
+    from {
+       transform: translateY(-100%);
+    }
+    to {
+       transform: translateY(0);
+    }
+ }
+ 
+
 .slider__check:checked + .slider__label + .mem {
-	display:block;
+    display:block;
     opacity: 1;
-    transform: scale(1);
-    transition: transform ease-in-out .5s, opacity ease-in-out 1s;
-	}
+    animation-name: move;
+    animation-duration: 0.6s;
+    transition: opacity ease-in 0.5s;
+}
 
 .slider__check:checked + .slider__label + .mem + .slider-text{
-	display:block;
+    display:block;
     opacity: 1;
-    transform: scale(1);
-    transition: transform ease-in-out 1s, opacity ease-in-out 1s;
-	}    
+    animation-name: move;
+    animation-duration: 0.6s;
+    transform: translateY(0);
+    transition: transform 1s, opacity ease-in 0.5s;
+}    
 
 .slider__check:checked + .slider__label {
 	background:#C00;
@@ -146,24 +171,37 @@
     height: 0.8em;
 	}
 
+/* ---------------------------------------------медиа запросы ------------------- */
 
-    @media screen and (max-width: 720px) { 
-        .slider {        
-            grid-template-columns:   4.5fr 13fr 1fr 1fr 1fr 1fr 1fr 1fr 4.5fr; 
+@media screen and (max-width: 1100px) { 
+    .slider {  
+        width: 60%;
     }
 }
 
-    @media screen and (max-width: 550.5px) { 
 
-    .slider {        
+@media screen and (max-width: 830px) { 
+    .slider {  
+        width: 70%;      
+    }
+}
+
+@media screen and (max-width: 720px) { 
+    .slider {    
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 550.1px) { 
+
+    .slider {    
+        width: 90%;    
         grid-template-areas: 
-    "A A A A A A A A A A"
-    "J J C D E F G H I I"
-    "L B B B B B B B B N"
-    "M M M M M M M M M M" ;
-    grid-template-columns:  1.6fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.6fr; 
+            "A A A A A A A A A A"
+            "J J C D E F G H I I"
+            "L B B B B B B B B N"
+            "M M M M M M M M M M" ;
+        grid-template-columns:  15% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 15%; 
     }
 }
 
-/* лучше сделать анимацию через animation
-искажение первой картинки - вертикальный скролл */
