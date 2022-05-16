@@ -66,13 +66,13 @@ body {
 
 #slider__check-3, .slider__label3 {
     grid-area: E;     
-        justify-self: center;
-        align-self: center;
+    justify-self: center;
+    align-self: center;
 }
 #slider__check-4, .slider__label4 {
     grid-area: F;   
-        justify-self: center;
-        align-self: center;
+    justify-self: center;
+    align-self: center;
 }
 #slider__check-5, .slider__label5 {
     grid-area: G; 
